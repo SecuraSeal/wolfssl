@@ -4419,7 +4419,7 @@ int wc_ecc_encrypt(ecc_key* privKey, ecc_key* pubKey, const byte* msg,
     int          offset = 0;         /* keys offset if doing msg exchange */
     byte*        encKey;
     byte*        encIv;
-    byte*        macKey;
+    byte*        macKey = NULL;
 
     if (privKey == NULL || pubKey == NULL || msg == NULL || out == NULL ||
                            outSz  == NULL)
@@ -4569,8 +4569,8 @@ int wc_ecc_decrypt(ecc_key* privKey, ecc_key* pubKey, const byte* msg,
     int          encKeySz;
     int          ivSz;
     int          offset = 0;       /* in case using msg exchange */
-    byte*        encKey;
-    byte*        encIv;
+    byte*        encKey = NULL;
+    byte*        encIv = NULL;
     byte*        macKey;
 
     if (privKey == NULL || pubKey == NULL || msg == NULL || out == NULL ||

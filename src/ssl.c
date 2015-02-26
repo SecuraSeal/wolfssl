@@ -11875,7 +11875,7 @@ int wolfSSL_RSA_sign(int type, const unsigned char* m,
                            unsigned int mLen, unsigned char* sigRet,
                            unsigned int* sigLen, WOLFSSL_RSA* rsa)
 {
-    word32 outLen;    
+    word32 outLen = 0;
     word32 signSz;
     int    initTmpRng = 0;
     RNG*   rng        = NULL;

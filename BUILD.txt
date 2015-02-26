@@ -1,0 +1,13 @@
+
+# To build the wolfssl static lib on mac os x do the following
+install brew
+install automake
+install libtool
+./autogen.sh
+
+./configure LDFLAGS="-Wl,-read_only_relocs,warning" CFLAGS=-mdynamic-no-pic --enable-ipv6 --enable-poly1305 --enable-sha512 --enable-hkdf --enable-ecc --enable-eccencrypt --enable-errorstrings --enable-md5 --enable-chacha --enable-hashdrbg --enable-ocsp --enable-pkcs7
+
+make
+
+#then run the universal_binary script to make the libcyassl.a
+./universal_binary.sh

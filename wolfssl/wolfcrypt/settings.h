@@ -26,6 +26,27 @@
 #ifndef WOLF_CRYPT_SETTINGS_H
 #define WOLF_CRYPT_SETTINGS_H
 
+#define NO_INLINE
+#define IPHONE
+#define HAVE_CHACHA
+#define HAVE_POLY1305
+#define OPENSSL_EXTRA
+#define HAVE_HKDF
+#define HAVE_OCSP
+#define HAVE_CRL
+#define WOLFSSL_DER_LOAD
+#define WOLFSSL_KEY_GEN
+#define WOLFSSL_SHA512
+#define HAVE_ECC
+#define HAVE_CURVE25519
+#define HAVE_ED25519
+#define HAVE_HASHDRBG
+#define HAVE_ONE_TIME_AUTH
+#define NO_WOLFSSL_SERVER
+#define NO_MD4
+#define NO_RABBIT
+#define NO_HC128
+
 #ifdef __cplusplus
     extern "C" {
 #endif
