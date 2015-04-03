@@ -38,6 +38,7 @@
 #define WOLFSSL_KEY_GEN
 #define WOLFSSL_SHA512
 #define HAVE_ECC
+#define HAVE_ECC_ENCRYPT
 #define HAVE_CURVE25519
 #define HAVE_ED25519
 #define HAVE_HASHDRBG
