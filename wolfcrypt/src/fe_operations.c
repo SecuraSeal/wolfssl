@@ -393,7 +393,9 @@ void fe_tobytes(unsigned char *s,const fe h)
   evidently 2^255 h10-2^255 q = 0.
   Goal: Output h0+...+2^230 h9.
   */
-
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wconversion"
+    
   s[0] = h0 >> 0;
   s[1] = h0 >> 8;
   s[2] = h0 >> 16;
@@ -427,7 +429,7 @@ void fe_tobytes(unsigned char *s,const fe h)
   s[30] = h9 >> 10;
   s[31] = h9 >> 18;
 }
-
+#pragma clang diagnostic pop
 
 /*
 h = f - g

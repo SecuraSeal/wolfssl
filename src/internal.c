@@ -5192,7 +5192,7 @@ static int Poly1305Tag(WOLFSSL* ssl, byte* additional, const byte* out,
 
     /* add size of AD and size of cipher to poly input */
     XMEMSET(padding, 0, sizeof(padding));
-    padding[0] = blockSz;
+    padding[0] = (byte)blockSz;
 
     /* 32 bit size of cipher to 64 bit endian */
     padding[8]  =  msglen       & 0xff;
